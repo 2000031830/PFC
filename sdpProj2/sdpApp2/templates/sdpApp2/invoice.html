@@ -1,0 +1,33 @@
+{% extends 'sdpApp2/base.html' %}
+{% block content%}
+{% for s in porders %}
+
+
+<h3 style="text-align: center" >INVOICE</h3>
+  <body>
+  <h3>Ship To:</h3>
+  <b>country :</b>{{ s.country }} <br>
+  <b>address :</b>{{ s.address }} <br>
+  <b>zipcode :</b>{{ s.zipcode }} <br>
+
+
+<h3>Bill To:</h3>
+  <b>firstname :</b>{{ s.firstname }} <br>
+  <b>lastname :</b>{{ s.lastname }} <br>
+  <b>phonenumber :</b>{{ s.phonenumber }} <br>
+
+<h3>Shipment Mode:</h3>
+   <b>{{ s.shipmentmode }}</b>
+<br>
+  <br>
+<center>
+<table border="1" style="width:800px">
+<tr><td><b>order id :</b>A12S8RE3-{{ s.orderquantity }} </td></tr>
+<tr><td><b>order quantity :</b>{{ s.orderquantity }} </td></tr>
+ </table>
+</center>
+<br>
+<br>
+  </body>
+{% endfor %}
+{% endblock %}

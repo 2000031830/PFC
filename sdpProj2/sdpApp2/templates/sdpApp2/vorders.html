@@ -1,0 +1,42 @@
+{% extends 'sdpApp2/base.html' %}
+{% block content%}
+<center>
+<h3>Placed Orders</h3>
+  <body>
+{% for s in porders %}
+    <table border="1" style="width:800px">
+
+      <tr>
+        <td>  <b>firstname :</b>{{ s.firstname }}  </td>
+      </tr>
+      <tr>
+        <td> <b>lastname :</b>{{ s.lastname }}  </td>
+</tr>
+<tr>
+        <td><b>phonenumber :</b>{{ s.phonenumber }}</td>
+</tr>
+<tr>
+        <td><b>order quantity :</b>{{ s.orderquantity }} </td>
+</tr>
+<tr>
+        <td><b>country :</b>{{ s.country }}  </td>
+</tr>
+<tr>
+       <td><b>zipcode :</b>{{ s.zipcode }}</td>
+</tr>
+<tr>
+      <td><b>address :</b>{{ s.address }}</td>
+</tr>
+<tr>
+      <td><b>shipment mode :</b>{{ s.shipmentmode }}</td>
+</tr>
+<br>
+<br>
+
+</tr>
+ </table>
+{% endfor %}
+  </body>
+    <button><a href="../invoice">Invoice</a></button>
+</center>
+{% endblock %}
